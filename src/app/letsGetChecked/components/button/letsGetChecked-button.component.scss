@@ -1,0 +1,27 @@
+@import "../../../../variables.scss";
+
+.letsGetChecked-button {
+    .disabled {
+        pointer-events: none !important;
+        opacity: 0.6 !important;
+    }
+    
+    .btn-primary {
+        border-radius: 100px;
+        background: linear-gradient(45deg, #60239A 0%, #954DCC 100%);
+        box-shadow: 0 5px 8px 0 #BDC1E7;
+        width: 100%;
+        color: $color_white;
+        border-color: transparent;
+    }
+
+    .btn-outline-primary {
+        box-sizing: border-box;
+        border: 1px solid $color_purple;
+        border-radius: 100px;
+        background-color: $color_white;
+        box-shadow: 0 5px 8px 0 #BDC1E7;
+        color: $color_purple;
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+@import "../../../../variables";
+
+.letsGetChecked-hint {
+    font-size: small;
+    padding-bottom: 7px;
+    .field {
+        margin-top: -15px;
+    }
+}

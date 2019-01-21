@@ -1,0 +1,30 @@
+<div class="posts">
+    <div class="addPost">
+        <letsGetChecked-button (onClickFct)="onClickAddPost()" text="Add Post" [isDisabled]="isEditing()"></letsGetChecked-button>
+    </div>
+    <div *ngIf="isEditing()" class="postForm">
+        <div class="titleInput"><letsGetChecked-input [(myModel)]="title" placeholder="What's your post title ?" [isRequired]=true></letsGetChecked-input></div>
+        <div class="userInput"><letsGetChecked-input [(myModel)]="user" placeholder="What's your name ?" [isRequired]=true></letsGetChecked-input></div>
+        <div class="descriptionInput"><letsGetChecked-input [(myModel)]="description" placeholder="What's the description ?" [isRequired]=true></letsGetChecked-input></div>
+        <div class="contentTextArea"><letsGetChecked-input [(myModel)]="content" [isTextArea]="true" placeholder="What is the content ?" [isRequired]=true></letsGetChecked-input></div>
+        <div class="btn-group mr-4">
+            <div class="button">
+                <letsGetChecked-button (onClickFct)="onClickCancelPost()" text="Cancel"></letsGetChecked-button>
+            </div>
+        </div>
+        <div class="btn-group">
+            <div class="button">
+                <letsGetChecked-button (onClickFct)="onClickValidatePost()" text="Send" type="important" [isDisabled]="isFormInvalid()"></letsGetChecked-button>
+            </div>
+        </div>
+    </div>
+    <ul class="list-unstyled">
+        <li *ngFor="let post of posts" class="media" (click)="onClickPost(post)">
+            <div class="media-body">
+                <h5 class="mt-0 mb-1">{{post.title}}</h5>
+                <div>{{post.description}}</div>
+                <div><small>Published by {{post.author}} the {{post.publish_date}}</small></div>
+            </div>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,10 @@
+<div class="letsGetChecked-hint">
+    <div *ngIf="field" class="field">
+        <mat-error *ngIf="field.invalid">
+            <div *ngIf="field.errors && field.errors.required">
+                Field required
+            </div>
+        </mat-error>
+    </div>
+</div>
+

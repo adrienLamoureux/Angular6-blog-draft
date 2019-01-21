@@ -1,0 +1,14 @@
+<div class="letsGetChecked-input">
+    <div *ngIf="!isTextArea">
+        <mat-form-field>
+            <input matInput type="text" [readonly]="isDisabled" #name="ngModel" [required]="isRequired" [ngModel]="myModel" (ngModelChange)="onModelChange($event)" [placeholder]="placeholder">
+        </mat-form-field>
+        <letsGetChecked-hint [field]="name"></letsGetChecked-hint>
+    </div>
+    <div *ngIf="isTextArea">
+        <mat-form-field>
+            <textarea matInput type="text" [readonly]="isDisabled" #name="ngModel" [required]="isRequired" [ngModel]="myModel" (ngModelChange)="myModelChange.emit($event)" [placeholder]="placeholder"></textarea>
+        </mat-form-field>
+        <letsGetChecked-hint [field]="name"></letsGetChecked-hint>
+    </div>
+</div>

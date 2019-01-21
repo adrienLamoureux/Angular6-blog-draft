@@ -1,0 +1,5 @@
+<div class="letsGetChecked-button">
+    <button [class.disabled]="isDisabled" [ngClass]="true ? type : ''" (click)="onClickFct.emit($event)">
+        <div *ngIf="text">{{text}}</div>
+    </button>
+</div>

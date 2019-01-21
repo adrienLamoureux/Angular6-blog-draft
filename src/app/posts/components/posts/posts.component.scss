@@ -1,0 +1,13 @@
+@import "../../../../variables.scss";
+
+.posts {
+    .addPost, .button {
+        width: 150px;
+    }
+    .list-unstyled {
+        padding-top: 10px;
+        li {
+            padding-top: 10px;
+        }
+    }
+}

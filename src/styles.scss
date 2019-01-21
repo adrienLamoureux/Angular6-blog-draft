@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "variables";
+
+html, body { height: 100%; }
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+    color: $text_color !important;
+    background-color: rgba(230,230,230,0.25) !important; 
+}
+  
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Nunito', serif !important;
+}
+
+@media (max-width: 767px) {
+    .hide-large {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .hide-small {
+        display: none;
+    }
+}
+
+.content {
+    .no-border-padding {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .no-padding-left {
+        padding-left: 0px;
+    }
+
+    .no-padding-right {
+        padding-right: 0px;
+    }
+
+    .reduce-border-padding {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+
+    .small-border-padding {
+        padding-left: 3.75px;
+        padding-right: 3.75px;
+    }
+
+    .actionButton {
+        text-align: center;
+        /deep/button {
+            width: 220px;
+            height: 48px;
+        }
+    }
+}
+
+.backgroundWhite {
+    background-color: $color_white;
+}
+
+.con {
+    min-height:100%;
+    position:relative;
+}
+
+.disabledDivLight {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.disabledDiv {
+    pointer-events: none;
+    opacity: 0.9;
+}

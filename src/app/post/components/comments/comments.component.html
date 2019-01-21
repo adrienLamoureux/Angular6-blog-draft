@@ -1,0 +1,33 @@
+<div class="comments">
+    <div *ngFor="let comment of comments">
+        <div class="media-body">
+            <div [innerHTML]="comment.content"></div>
+            <div><small>Published by {{comment.user}} the {{comment.date}}</small></div>
+            <div class="btn-group mr-4">
+                <div class="button">
+                    <letsGetChecked-button (onClickFct)="onClickEditComment(comment)" text="Edit comment" [isDisabled]="isEditing(comment)"></letsGetChecked-button>
+                </div>
+            </div>
+            <div class="btn-group">
+                <div class="button">
+                    <letsGetChecked-button (onClickFct)="onClickAddComment(comment)" text="Add comment" [isDisabled]="isEditing(comment)"></letsGetChecked-button>
+                </div>
+            </div>
+            <div *ngIf="isEditing(comment)" class="commentForm">
+                <div class="userInput"><letsGetChecked-input [(myModel)]="comment.newComment.user" placeholder="What's your name ?" [isRequired]=true></letsGetChecked-input></div>
+                <div class="contentTextArea"><letsGetChecked-input [(myModel)]="comment.newComment.content" [isTextArea]="true" placeholder="What do you want to say ?" [isRequired]=true></letsGetChecked-input></div>
+                <div class="btn-group mr-4">
+                    <div class="button">
+                        <letsGetChecked-button (onClickFct)="onClickCancelComment(comment)" text="Cancel"></letsGetChecked-button>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <div class="button">
+                        <letsGetChecked-button (onClickFct)="onClickValidateComment(comment)" [text]="actionText(comment)" type="important" [isDisabled]="isFormInvalid(comment)"></letsGetChecked-button>
+                    </div>
+                </div>
+            </div>
+            <comments [comments]="comment.children" *ngIf="comment.children && comment.children.length > 0"></comments>
+        </div>
+    </div>
+</div>

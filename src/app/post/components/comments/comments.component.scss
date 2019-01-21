@@ -1,0 +1,23 @@
+@import "../../../../variables.scss";
+
+.comments {
+    padding-left: 150px;
+    .media-body {
+        padding-top: 30px;
+    }
+    .addCommentBtn, .editCommentBtn {
+        width: 150px;
+    }
+    .btn-group {
+        padding-top: 10px;
+    }
+    .commentForm {
+        padding-top: 20px;
+        .userInput, .contentTextArea {
+            width: 80%;
+        }
+        .button {
+            width: 150px;
+        }
+    }
+}

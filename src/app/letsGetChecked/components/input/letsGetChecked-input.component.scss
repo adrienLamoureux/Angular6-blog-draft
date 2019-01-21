@@ -1,0 +1,23 @@
+@import "../../../../variables";
+
+.letsGetChecked-input {
+    .disabled {
+        pointer-events: none;
+        background: #dddddd;
+    }
+
+    input {
+        color: $text_color; 
+    }
+    
+    /deep/.mat-form-field {
+        width: 100%;
+        .mat-form-field-label {
+            color: $text_color !important;
+        }
+    }
+    /deep/.mat-form-field-underline {
+        background-color: $text_color !important;
+    }
+}
+

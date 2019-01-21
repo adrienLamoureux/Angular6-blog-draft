@@ -1,0 +1,17 @@
+<div class="post">
+     
+    <div class="backBtn">
+        <letsGetChecked-button (onClickFct)="onClickBack()" text="Back"></letsGetChecked-button>
+    </div>
+
+    <ul *ngIf="commentedPost.post" class="list-unstyled">
+        <li class="media">
+            <div class="media-body">
+                <h5 class="mt-0 mb-1">{{commentedPost.post.title}}</h5>
+                <div [innerHTML]=commentedPost.post.content></div>
+                <div><small>Published by {{commentedPost.post.author}} the {{commentedPost.post.publish_date}}</small></div>
+                <comments [comments]="commentedPost.commentTree"></comments>
+            </div>
+        </li>
+    </ul>
+</div>
