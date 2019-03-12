@@ -1,4 +1,4 @@
-# letsGetChecked UI
+# Angular6-blog-draft
 
 ## Pre-requiert
 
